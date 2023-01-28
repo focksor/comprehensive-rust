@@ -37,7 +37,7 @@ msgstr "Rust 生态"
 
 #: src/SUMMARY.md:9
 msgid "Code Samples"
-msgstr "代码实例"
+msgstr "代码示例"
 
 #: src/SUMMARY.md:10
 msgid "Running Cargo Locally"
@@ -1158,7 +1158,7 @@ msgstr ""
 
 #: src/cargo.md:1
 msgid "# Using Cargo"
-msgstr ""
+msgstr "# 使用 Cargo"
 
 #: src/cargo.md:3
 msgid ""
@@ -1169,22 +1169,22 @@ msgid ""
 "give a brief overview of what Cargo is and how it fits into the wider "
 "ecosystem\n"
 "and how it fits into this training."
-msgstr ""
+msgstr "当你开始阅读关于 Rust 的内容时，你很快会遇见 [Cargo](https://doc.rust-lang.org/cargo/)，Rust 生态中用于构建和运行 Rust 应用程序的标准工具。这里我们想要简要介绍 Cargo 是什么以及它如何适应广泛的生态和如何适配这个课程训练。"
 
 #: src/cargo.md:8
 msgid "## Installation"
-msgstr ""
+msgstr "## 安装"
 
 #: src/cargo.md:10
 msgid "### Rustup (Recommended)"
-msgstr ""
+msgstr "### Rustup （推荐）"
 
 #: src/cargo.md:12
 msgid ""
 "You can follow the instructions to install cargo and rust compiler, among "
 "other standard ecosystem tools with the [rustup][3] tool, which is "
 "maintained by the Rust Foundation."
-msgstr ""
+msgstr "你可以使用由 Rust 基金会维护的 [rustup][3] 工具按照说明安装 cargo 和 rust 编译器，以及其它的标准的周边工具。"
 
 #: src/cargo.md:14
 msgid ""
@@ -1195,7 +1195,7 @@ msgstr ""
 
 #: src/cargo.md:16
 msgid "### Package Managers"
-msgstr ""
+msgstr "与 cargo 和 rustc 一起， Rustup 将会把自己安装为命令行工具，你可以用来安装/切换工具链，设置交叉编译，等等。"
 
 #: src/cargo.md:18
 msgid "#### Debian"
@@ -1203,7 +1203,7 @@ msgstr ""
 
 #: src/cargo.md:20
 msgid "On Debian/Ubuntu, you can install Cargo and the Rust source with"
-msgstr ""
+msgstr "在 Debian/Ubuntu，你可以通过以下指令安装 Cargo 和 Rust 源码："
 
 #: src/cargo.md:22
 msgid ""
@@ -1217,7 +1217,7 @@ msgid ""
 "This will allow [rust-analyzer][1] to jump to the definitions. We suggest "
 "using\n"
 "[VS Code][2] to edit the code (but any LSP compatible editor works)."
-msgstr ""
+msgstr "这让 [rust-analyzer][1] 可以跳转到定义。我们推荐使用 [VS Code][2] 来编辑代码（但是任何兼容LSP的编辑器都可以工作）。"
 
 #: src/cargo.md:29
 msgid ""
@@ -1225,7 +1225,7 @@ msgid ""
 "their own analysis but have their own tradeoffs. If you prefer them, you can "
 "install the [Rust Plugin][5]. Please take note that as of January 2023 "
 "debugging only works on the CLion version of the Jetbrains IDEA suite."
-msgstr ""
+msgstr "有些人还喜欢使用 [Jetbrains][4] IDE家族，它们有自己的分析，也有自己的权衡。如果你更喜欢它们，你可以安装 [Rust 插件][5]。请注意，截至2023年1月，调试器仅在 Jetbrains IDEA 套件的 CLion 版本中可以工作。"
 
 #: src/cargo.md:31
 msgid ""
@@ -1238,12 +1238,12 @@ msgstr ""
 
 #: src/cargo/rust-ecosystem.md:1
 msgid "# The Rust Ecosystem"
-msgstr ""
+msgstr "# Rust 生态"
 
 #: src/cargo/rust-ecosystem.md:3
 msgid ""
 "The Rust ecosystem consists of a number of tools, of which the main ones are:"
-msgstr ""
+msgstr "Rust 生态包含许多工具，主要是这些："
 
 #: src/cargo/rust-ecosystem.md:5
 msgid ""
@@ -1251,6 +1251,7 @@ msgid ""
 "other\n"
 "  intermediate formats[^rustc]."
 msgstr ""
+"* `rustc`：Rust 编译器将 `.rs` 转为二进制和其它中间格式[^rustc]。"
 
 #: src/cargo/rust-ecosystem.md:8
 msgid ""
@@ -1260,6 +1261,7 @@ msgid ""
 "  `rustc` when building your project. Cargo also comes with a built-in test\n"
 "  runner which is used to execute unit tests[^cargo]."
 msgstr ""
+"* `cargo`：Rust 依赖管理和构建工具。Cargo 知道如何下载位于 <https://crates.io> 的依赖并在你构建工程时传给 `rustc`。Cargo 还附带了一个内置的测试运行器，用于执行单元测试[^cargo]。"
 
 #: src/cargo/rust-ecosystem.md:13
 msgid ""
@@ -1271,6 +1273,7 @@ msgid ""
 "`rustup`\n"
 "  will let you switch between them as needed."
 msgstr ""
+"* `rustup`：Rust 工具链安装器和升级器。这个工具用于安装和当新版本 Rust 释放时更新 `rustc` 和 `cargo`。此外，`rustup` 还能下载标准库的文档。你可以同时安装多个版本的 Rust，`rustup` 将允许你根据需要在它们之间切换。"
 
 #: src/cargo/rust-ecosystem.md:21 src/hello-world.md:25
 #: src/hello-world/small-example.md:27 src/why-rust/runtime.md:10
@@ -1279,7 +1282,7 @@ msgstr ""
 #: src/error-handling/converting-error-types.md:68
 #: src/concurrency/threads.md:30
 msgid "Key points:"
-msgstr ""
+msgstr "要点："
 
 #: src/cargo/rust-ecosystem.md:23
 msgid ""
@@ -1287,47 +1290,55 @@ msgid ""
 "  every six weeks. New releases maintain backwards compatibility with\n"
 "  old releases --- plus they enable new functionality."
 msgstr ""
+"* Rust 有一个快速发布计划，每六周发布一个新版本。新版本保持对旧版本的向后兼容性 --- 并启用新功能。"
 
 #: src/cargo/rust-ecosystem.md:27
 msgid ""
 "* There are three release channels: \"stable\", \"beta\", and \"nightly\"."
 msgstr ""
+"* 有三个发布通道：\"stable\"、 \"beta\" 和 \"nightly\"。"
 
 #: src/cargo/rust-ecosystem.md:29
 msgid ""
 "* New features are being tested on \"nightly\", \"beta\" is what becomes\n"
 "  \"stable\" every six weeks."
 msgstr ""
+"* 每六个星期，在 \"nightly\", \"beta\" 中进行了测试的新功能将会成为 \"stable\"。"
 
 #: src/cargo/rust-ecosystem.md:32
 msgid ""
 "* Rust also has [editions]: the current edition is Rust 2021. Previous\n"
 "  editions were Rust 2015 and Rust 2018."
 msgstr ""
+"* Rust 也有 [版本]：现在的版本是 Rust 2021。之前的版本是 Rust 2015 和 Rust 2018。"
 
 #: src/cargo/rust-ecosystem.md:35
 msgid ""
 "  * The editions are allowed to make backwards incompatible changes to\n"
 "    the language."
 msgstr ""
+"  * 每个版本可以允许对语言进行向后不兼容的更改。"
 
 #: src/cargo/rust-ecosystem.md:38
 msgid ""
 "  * To prevent breaking code, editions are opt-in: you select the\n"
 "    edition for your crate via the `Cargo.toml` file."
 msgstr ""
+"  * 为了防止破坏代码，版本是可选的：你可以通过 `Cargo.toml` 为你的 crate 选择版本。"
 
 #: src/cargo/rust-ecosystem.md:41
 msgid ""
 "  * To avoid splitting the ecosystem, Rust compilers can mix code\n"
 "    written for different editions."
 msgstr ""
+"  * 为了避免分裂生态，Rust 编译器可以混合为不同版本编写的代码。"
 
 #: src/cargo/rust-ecosystem.md:44
 msgid ""
 "  * Mention that it is quite rare to ever use the compiler directly not "
 "through `cargo` (most users never do)."
 msgstr ""
+"  * 请注意，不通过 `cargo` 直接使用编译器是非常罕见的（绝大部分用户都从不这样做）。"
 
 #: src/cargo/rust-ecosystem.md:46
 msgid ""
@@ -1343,26 +1354,38 @@ msgid ""
 "[cargo clippy]).\n"
 "  * Read more from the [official Cargo Book]"
 msgstr ""
+"  * 可能值得一提的是，Cargo 本身就是一个非常强大和全面的工具。它具有很多高级功能，包括但不限于：\n"
+"      * 构造项目/包\n"
+"      * [工作空间]\n"
+"      * 开发依赖和运行依赖的管理/缓存\n"
+"      * [安装脚本]\n"
+"      * [全局安装]\n"
+"      * 它还可以通过子命令插件进行拓展（例如 [cargo clippy]）。\n"
+"  * 通过 [Cargo 官方文档] 了解更多"
 
 #: src/cargo/rust-ecosystem.md:55
 msgid "[editions]: https://doc.rust-lang.org/edition-guide/"
-msgstr ""
+msgstr "[版本]: https://doc.rust-lang.org/edition-guide/"
 
 #: src/cargo/rust-ecosystem.md:57
 msgid "[workspaces]: https://doc.rust-lang.org/cargo/reference/workspaces.html"
-msgstr ""
+msgstr "[工作空间]: https://doc.rust-lang.org/cargo/reference/workspaces.html"
 
 #: src/cargo/rust-ecosystem.md:59
 msgid ""
 "[build scripting]: https://doc.rust-lang.org/cargo/reference/build-scripts."
 "html"
 msgstr ""
+"[安装脚本]: https://doc.rust-lang.org/cargo/reference/build-scripts."
+"html"
 
 #: src/cargo/rust-ecosystem.md:61
 msgid ""
 "[global installation]: https://doc.rust-lang.org/cargo/commands/cargo-"
 "install.html"
 msgstr ""
+"[全局安装]: https://doc.rust-lang.org/cargo/commands/cargo-"
+"install.html"
 
 #: src/cargo/rust-ecosystem.md:63
 msgid "[cargo clippy]: https://github.com/rust-lang/rust-clippy"
@@ -1370,11 +1393,11 @@ msgstr ""
 
 #: src/cargo/rust-ecosystem.md:65
 msgid "[official Cargo Book]: https://doc.rust-lang.org/cargo/"
-msgstr ""
+msgstr "[Cargo 官方文档]: https://doc.rust-lang.org/cargo/"
 
 #: src/cargo/code-samples.md:1
 msgid "# Code Samples in This Training"
-msgstr ""
+msgstr "# 本培训中的代码示例"
 
 #: src/cargo/code-samples.md:3
 msgid ""
@@ -1384,6 +1407,7 @@ msgid ""
 "and\n"
 "ensures a consistent experience for everyone."
 msgstr ""
+"对于本次培训，我们将主要通过我们可以在浏览器中执行的例子探索 Rust 语言。这使得起步更加容易，也确保每个人都有一致的体验。"
 
 #: src/cargo/code-samples.md:7
 msgid ""
@@ -1393,10 +1417,11 @@ msgid ""
 "to\n"
 "work with dependencies and for that you need Cargo."
 msgstr ""
+"仍然鼓励安装 Cargo：这将使你更容易完成练习。在最后一天，我们将做一个大练习，以向你展示如何使用依赖，这时候你需要 Cargo。"
 
 #: src/cargo/code-samples.md:11
 msgid "The code blocks in this course are fully interactive:"
-msgstr ""
+msgstr "本课程中的代码块都是完全交互式的："
 
 #: src/cargo/code-samples.md:13
 msgid ""
@@ -1406,6 +1431,11 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
+"```rust,editable\n"
+"fn main() {\n"
+"    println!(\"编辑我！\");\n"
+"}\n"
+"```"
 
 #: src/cargo/code-samples.md:19
 msgid ""
@@ -1413,18 +1443,21 @@ msgid ""
 "the\n"
 "text box."
 msgstr ""
+"当焦点处于文本框时，你可以使用 <kbd>Ctrl + Enter</kbd> 执行代码。"
 
 #: src/cargo/code-samples.md:24
 msgid ""
 "Most code samples are editable like shown above. A few code samples\n"
 "are not editable for various reasons:"
 msgstr ""
+"大部分的代码示例都像上面展示的那样可以编辑。一小部分示例由于各种原因不可编辑："
 
 #: src/cargo/code-samples.md:27
 msgid ""
 "* The embedded playgrounds cannot execute unit tests. Copy-paste the\n"
 "  code and open it in the real Playground to demonstrate unit tests."
 msgstr ""
+"* 嵌入的 playgrounds 无法执行单元测试。复制粘贴这些代码并在真正的 Playground 打开以证实单元测试。"
 
 #: src/cargo/code-samples.md:30
 msgid ""
@@ -1433,10 +1466,11 @@ msgid ""
 "  solve the exercises using a local Rust installation or via the\n"
 "  Playground."
 msgstr ""
+"* 当你离开页面时，嵌入的 playgrounds 会丢失状态！这就是学生需要使用本地 Rust 安装或通过 Playground 解决练习的原因。"
 
 #: src/cargo/running-locally.md:1
 msgid "# Running Code Locally with Cargo"
-msgstr ""
+msgstr "# 通过 Cargo 本地运行代码"
 
 #: src/cargo/running-locally.md:3
 msgid ""
@@ -1447,6 +1481,7 @@ msgid ""
 "of\n"
 "writing, the latest stable Rust release has these version numbers:"
 msgstr ""
+"如果你想要在你自己的系统上试验代码，首先你需要安装 Rust。请参照 [Rust 程序设计语言中的说明][1]。这应该会给你一个可以工作的 `rustc` 和 `cargo`。在编辑时，最新的 Rust 稳定版本有以下版本号："
 
 #: src/cargo/running-locally.md:8
 msgid ""
@@ -1464,17 +1499,20 @@ msgid ""
 "one\n"
 "of the examples in this training:"
 msgstr ""
+"完成后，请参照以下步骤，从这次培训中的一个例子构建出一个 Rust 二进制文件："
 
 #: src/cargo/running-locally.md:18
 msgid ""
 "1. Click the \"Copy to clipboard\" button on the example you want to copy."
 msgstr ""
+"1. 点击你想要复制的示例的 \"Copy to clipboard\" 按钮。"
 
 #: src/cargo/running-locally.md:20
 msgid ""
 "2. Use `cargo new exercise` to create a new `exercise/` directory for your "
 "code:"
 msgstr ""
+"2. 使用 `cargo new exercise` 为你的代码创建一个新的 `exercise/` 目录："
 
 #: src/cargo/running-locally.md:22
 msgid ""
@@ -1489,6 +1527,7 @@ msgid ""
 "3. Navigate into `exercise/` and use `cargo run` to build and run your "
 "binary:"
 msgstr ""
+"3. 前往 `exercise/` 并使用 `cargo run` 构建和运行你的二进制文件："
 
 #: src/cargo/running-locally.md:29
 msgid ""
@@ -1508,6 +1547,7 @@ msgid ""
 "   example, using the example on the previous page, make `src/main.rs` look "
 "like"
 msgstr ""
+"4. 使用你自己的代码替换 `src/main.rs` 中的样板代码。比如，使用前一页中的示例代码，让 `src/main.rs` 看起来像"
 
 #: src/cargo/running-locally.md:41
 msgid ""
@@ -1517,10 +1557,15 @@ msgid ""
 "    }\n"
 "    ```"
 msgstr ""
+"    ```rust\n"
+"    fn main() {\n"
+"        println!(\"编辑我！\");\n"
+"    }\n"
+"    ```"
 
 #: src/cargo/running-locally.md:47
 msgid "5. Use `cargo run` to build and run your updated binary:"
-msgstr ""
+msgstr "5. 使用 `cargo run` 构建并运行你新的二进制文件："
 
 #: src/cargo/running-locally.md:49
 msgid ""
@@ -1532,6 +1577,13 @@ msgid ""
 "    Edit me!\n"
 "    ```"
 msgstr ""
+"    ```shell\n"
+"    $ cargo run\n"
+"       Compiling exercise v0.1.0 (/home/mgeisler/tmp/exercise)\n"
+"        Finished dev [unoptimized + debuginfo] target(s) in 0.24s\n"
+"         Running `target/debug/exercise`\n"
+"    编辑我！\n"
+"    ```"
 
 #: src/cargo/running-locally.md:57
 msgid ""
@@ -1543,6 +1595,7 @@ msgid ""
 "optimized\n"
 "   release build in `target/release/`."
 msgstr ""
+"6. 使用 `cargo check` 快速检查你工程中的错误，使用 `cargo build` 编译而不运行它。你可以在 `target/debug/` 中找到正常的 debug 版本编译输出。使用 `cargo build --release` 会在 `target/release/` 构建产生一个优化的 release 版本。"
 
 #: src/cargo/running-locally.md:62
 msgid ""
@@ -1551,6 +1604,7 @@ msgid ""
 "   run `cargo` commands, it will automatically download and compile missing\n"
 "   dependencies for you."
 msgstr ""
+"7. 你可以通过编辑 `Cargo.toml` 为你的工程添加依赖项。当你运行 `cargo` 命令时，它会自动为你下载并编译缺失的依赖项。"
 
 #: src/cargo/running-locally.md:66
 msgid "[1]: https://doc.rust-lang.org/book/ch01-01-installation.html"
@@ -1562,6 +1616,7 @@ msgid ""
 "local editor. It will make their life easier since they will have a\n"
 "normal development environment."
 msgstr ""
+"尝试鼓励课程参与者安装 Cargo 并使用一个本地编辑器。这将会使他们的生活更轻松，因为他们将会有一个正常的开发环境。"
 
 #: src/welcome-day-1.md:1
 msgid "# Welcome to Day 1"
