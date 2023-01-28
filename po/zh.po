@@ -13,47 +13,47 @@ msgstr ""
 
 #: src/SUMMARY.md:3
 msgid "Welcome to Comprehensive Rust 🦀"
-msgstr ""
+msgstr "欢迎来到 Comprehensive Rust 🦀"
 
 #: src/SUMMARY.md:4
 msgid "Running the Course"
-msgstr ""
+msgstr "课程实施"
 
 #: src/SUMMARY.md:5
 msgid "Course Structure"
-msgstr ""
+msgstr "课程结构"
 
 #: src/SUMMARY.md:6
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: src/SUMMARY.md:7
 msgid "Using Cargo"
-msgstr ""
+msgstr "使用 Cargo"
 
 #: src/SUMMARY.md:8
 msgid "Rust Ecosystem"
-msgstr ""
+msgstr "Rust 生态"
 
 #: src/SUMMARY.md:9
 msgid "Code Samples"
-msgstr ""
+msgstr "代码实例"
 
 #: src/SUMMARY.md:10
 msgid "Running Cargo Locally"
-msgstr ""
+msgstr "本地运行 Cargo"
 
 #: src/SUMMARY.md:13
 msgid "Day 1: Morning"
-msgstr ""
+msgstr "第 1 天：上午"
 
 #: src/SUMMARY.md:17 src/SUMMARY.md:73 src/SUMMARY.md:126 src/SUMMARY.md:180
 msgid "Welcome"
-msgstr ""
+msgstr "欢迎"
 
 #: src/SUMMARY.md:18
 msgid "What is Rust?"
-msgstr ""
+msgstr "Rust 是什么？"
 
 #: src/SUMMARY.md:19
 msgid "Hello World!"
@@ -61,88 +61,88 @@ msgstr ""
 
 #: src/SUMMARY.md:20
 msgid "Small Example"
-msgstr ""
+msgstr "小示例"
 
 #: src/SUMMARY.md:21
 msgid "Why Rust?"
-msgstr ""
+msgstr "为什么使用 Rust？"
 
 #: src/SUMMARY.md:22
 msgid "Compile Time Guarantees"
-msgstr ""
+msgstr "编译期保证"
 
 #: src/SUMMARY.md:23
 msgid "Runtime Guarantees"
-msgstr ""
+msgstr "运行时保证"
 
 #: src/SUMMARY.md:24
 msgid "Modern Features"
-msgstr ""
+msgstr "现代化特性"
 
 #: src/SUMMARY.md:25
 msgid "Basic Syntax"
-msgstr ""
+msgstr "基础语法"
 
 #: src/SUMMARY.md:26
 msgid "Scalar Types"
-msgstr ""
+msgstr "标量类型"
 
 #: src/SUMMARY.md:27
 msgid "Compound Types"
-msgstr ""
+msgstr "复合类型"
 
 #: src/SUMMARY.md:28
 msgid "References"
-msgstr ""
+msgstr "引用"
 
 #: src/SUMMARY.md:29
 msgid "Dangling References"
-msgstr ""
+msgstr "垂悬引用"
 
 #: src/SUMMARY.md:30
 msgid "Slices"
-msgstr ""
+msgstr "切片"
 
 #: src/SUMMARY.md:31
 msgid "String vs str"
-msgstr ""
+msgstr "String 与 str"
 
 #: src/SUMMARY.md:32
 msgid "Functions"
-msgstr ""
+msgstr "函数"
 
 #: src/SUMMARY.md:33 src/SUMMARY.md:80
 msgid "Methods"
-msgstr ""
+msgstr "方法"
 
 #: src/SUMMARY.md:34
 msgid "Overloading"
-msgstr ""
+msgstr "重载"
 
 #: src/SUMMARY.md:35 src/SUMMARY.md:64 src/SUMMARY.md:88 src/SUMMARY.md:117
 #: src/SUMMARY.md:145 src/SUMMARY.md:172 src/SUMMARY.md:195 src/SUMMARY.md:222
 msgid "Exercises"
-msgstr ""
+msgstr "练习"
 
 #: src/SUMMARY.md:36
 msgid "Implicit Conversions"
-msgstr ""
+msgstr "隐式转换"
 
 #: src/SUMMARY.md:37
 msgid "Arrays and for Loops"
-msgstr ""
+msgstr "数组和 for 循环"
 
 #: src/SUMMARY.md:39
 msgid "Day 1: Afternoon"
-msgstr ""
+msgstr "第 1 天：下午"
 
 #: src/SUMMARY.md:41
 msgid "Variables"
-msgstr ""
+msgstr "变量"
 
 #: src/SUMMARY.md:42
 msgid "Type Inference"
-msgstr ""
+msgstr "类型推导"
 
 #: src/SUMMARY.md:43
 msgid "static & const"
@@ -150,67 +150,67 @@ msgstr ""
 
 #: src/SUMMARY.md:44
 msgid "Scopes and Shadowing"
-msgstr ""
+msgstr "作用域和遮蔽"
 
 #: src/SUMMARY.md:45
 msgid "Memory Management"
-msgstr ""
+msgstr "内存管理"
 
 #: src/SUMMARY.md:46
 msgid "Stack vs Heap"
-msgstr ""
+msgstr "堆和栈"
 
 #: src/SUMMARY.md:47
 msgid "Stack Memory"
-msgstr ""
+msgstr "栈内存"
 
 #: src/SUMMARY.md:48
 msgid "Manual Memory Management"
-msgstr ""
+msgstr "手动内存管理"
 
 #: src/SUMMARY.md:49
 msgid "Scope-Based Memory Management"
-msgstr ""
+msgstr "基于作用域的内存管理"
 
 #: src/SUMMARY.md:50
 msgid "Garbage Collection"
-msgstr ""
+msgstr "垃圾回收"
 
 #: src/SUMMARY.md:51
 msgid "Rust Memory Management"
-msgstr ""
+msgstr "Rust 内存管理"
 
 #: src/SUMMARY.md:52
 msgid "Comparison"
-msgstr ""
+msgstr "对比"
 
 #: src/SUMMARY.md:53
 msgid "Ownership"
-msgstr ""
+msgstr "所有权"
 
 #: src/SUMMARY.md:54
 msgid "Move Semantics"
-msgstr ""
+msgstr "移动语义"
 
 #: src/SUMMARY.md:55
 msgid "Moved Strings in Rust"
-msgstr ""
+msgstr "Rust 中移动字符串"
 
 #: src/SUMMARY.md:56
 msgid "Double Frees in Modern C++"
-msgstr ""
+msgstr "现代 C++ 的 Double Frees"
 
 #: src/SUMMARY.md:57
 msgid "Moves in Function Calls"
-msgstr ""
+msgstr "函数调用中的移动"
 
 #: src/SUMMARY.md:58
 msgid "Copying and Cloning"
-msgstr ""
+msgstr "复制和克隆"
 
 #: src/SUMMARY.md:59
 msgid "Borrowing"
-msgstr ""
+msgstr "借用"
 
 #: src/SUMMARY.md:60
 msgid "Shared and Unique Borrows"
@@ -774,7 +774,7 @@ msgstr ""
 
 #: src/welcome.md:1
 msgid "# Welcome to Comprehensive Rust 🦀"
-msgstr ""
+msgstr "# 欢迎来到 Comprehensive Rust 🦀"
 
 #: src/welcome.md:3
 msgid ""
@@ -785,13 +785,14 @@ msgid ""
 "and error handling. It also includes Android-specific content on the last "
 "day."
 msgstr ""
+"这是一个由 Android 团队开发的四天学会 Rust 的课程。这个课程涵盖 Rust 从基础语法到泛型和错误处理的所有方面。它还包含了 Android 特有的内容于最后一天。"
 
 #: src/welcome.md:7
 msgid ""
 "The goal of the course is to teach you Rust. We assume you don't know "
 "anything\n"
 "about Rust and hope to:"
-msgstr ""
+msgstr "这个课程的目标是教你 Rust。我们假设你不知道 Rust 的任何东西并希望："
 
 #: src/welcome.md:10
 msgid ""
@@ -799,10 +800,13 @@ msgid ""
 "* Enable you to modify existing programs and write new programs in Rust.\n"
 "* Show you common Rust idioms."
 msgstr ""
+"* 让你全面了解 Rust 语法和语言。\n"
+"* 让你可以修改现有的 Rust 程序和编写新的 Rust 程序。\n"
+"* 展示常见的 Rust 习语。"
 
 #: src/welcome.md:14
 msgid "On Day 4, we will cover Android-specific things such as:"
-msgstr ""
+msgstr "在第 4 天，我们将包含一些安卓特有的东西，比如："
 
 #: src/welcome.md:16
 msgid ""
@@ -810,6 +814,9 @@ msgid ""
 "* AIDL servers and clients.\n"
 "* Interoperability with C, C++, and Java."
 msgstr ""
+"* 使用 Rust 构建安卓组件。\n"
+"* AIDL 服务器和客户端。\n"
+"* 与 C, C++, 和 Java 进行互操作。"
 
 #: src/welcome.md:20
 msgid ""
@@ -819,10 +826,11 @@ msgid ""
 "about\n"
 "writing code for Android itself, the operating system. "
 msgstr ""
+"需要注意的是，本课程不包括安卓 **应用** 的 Rust 开发，那些安卓特有的部分是针对于安卓操作系统本身的代码编写。"
 
 #: src/welcome.md:24
 msgid "## Non-Goals"
-msgstr ""
+msgstr "## 非现阶段目标"
 
 #: src/welcome.md:26
 msgid ""
@@ -830,6 +838,8 @@ msgid ""
 "days.\n"
 "Some non-goals of this course are:"
 msgstr ""
+"Rust 是一个非常大的语言，我们不可能在几天内涵盖其所有内容。\n"
+"本课程的一些非现阶段目标是："
 
 #: src/welcome.md:29
 msgid ""
@@ -841,10 +851,12 @@ msgid ""
 "  Book](https://doc.rust-lang.org/book/ch19-06-macros.html) and [Rust by\n"
 "  Example](https://doc.rust-lang.org/rust-by-example/macros.html) instead."
 msgstr ""
+"* 学习如何使用异步 Rust --- 我们只会在涉及传统并发原语时提及异步 Rust。有关此主题的详细信息请参见 [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)。\n"
+"* 学习如何编写宏，请参阅 [Rust Book 的第 19.5 节](https://doc.rust-lang.org/book/ch19-06-macros.html) 和 [通过例子学习 Rust](https://doc.rust-lang.org/rust-by-example/macros.html)。"
 
 #: src/welcome.md:37
 msgid "## Assumptions"
-msgstr ""
+msgstr "## 假设"
 
 #: src/welcome.md:39
 msgid ""
@@ -853,14 +865,14 @@ msgid ""
 "typed language and we will sometimes make comparisons with C and C++ to "
 "better\n"
 "explain or contrast the Rust approach."
-msgstr ""
+msgstr "这门课程假设你已经知道如何编程。Rust 是一个静态类型语言，我们有时候会通过与 C 和 C++ 进行比较以更好地解释或对比 Rust 实现。"
 
 #: src/welcome.md:43
 msgid ""
 "If you know how to program in a dynamically typed language such as Python "
 "or\n"
 "JavaScript, then you will be able to follow along just fine too."
-msgstr ""
+msgstr "如果你知道如何使用动态类型语言（如 Python 或 Javascript）进行编程，那么你也可以很好地跟上。"
 
 #: src/welcome.md:46 src/cargo/rust-ecosystem.md:19
 #: src/cargo/code-samples.md:22 src/cargo/running-locally.md:68
@@ -915,7 +927,7 @@ msgid ""
 "information to the slides. This could be key points which the instructor "
 "should\n"
 "cover as well as answers to typical questions which come up in class."
-msgstr ""
+msgstr "这是一个 _演讲者备注_ 示例。我们将用它们在幻灯片中添加额外的信息。这可能会是讲师应该涵盖的关键点和课堂上会出现的经典问题的答案。"
 
 #: src/welcome.md:52 src/cargo/rust-ecosystem.md:67
 #: src/cargo/code-samples.md:35 src/cargo/running-locally.md:74
@@ -961,22 +973,22 @@ msgstr ""
 
 #: src/running-the-course.md:1
 msgid "# Running the Course"
-msgstr ""
+msgstr "# 课程实施"
 
 #: src/running-the-course.md:3 src/running-the-course/course-structure.md:3
 msgid "> This page is for the course instructor."
-msgstr ""
+msgstr "> 这一页是给课程讲师的。"
 
 #: src/running-the-course.md:5
 msgid ""
 "Here is a bit of background information about how we've been running the "
 "course\n"
 "internally at Google."
-msgstr ""
+msgstr "这里有一些关于我们如何在 Google 内部进行课程的背景信息。"
 
 #: src/running-the-course.md:8
 msgid "To run the course, you need to:"
-msgstr ""
+msgstr "为了举办课程，你需要："
 
 #: src/running-the-course.md:10
 msgid ""
@@ -988,6 +1000,7 @@ msgid ""
 "   notes in a popup (click the link with a little arrow next to \"Speaker\n"
 "   Notes\"). This way you have a clean screen to present to the class."
 msgstr ""
+"1. 熟悉课程材料。我们在一些页面中包括了演讲者备注来帮助突出重点（请通过贡献更多演讲者备注来帮助我们！）。你应该要打开演讲者注解为一个弹出窗（点击 \"Speaker Notes\" 旁边的小箭头）。这样你就有了一个展现给课堂的干净的屏幕。"
 
 #: src/running-the-course.md:16
 msgid ""
@@ -998,6 +1011,7 @@ msgid ""
 "process\n"
 "   all the information we give them."
 msgstr ""
+"2. 确定日期。由于这个课程很大，我们建议你将这四天安排在两周内。课程参与者表示在课程中有间隔时间是很有用的，因为这有助于他们处理我们提供的所有信息。"
 
 #: src/running-the-course.md:21
 msgid ""
@@ -1008,6 +1022,7 @@ msgid ""
 "have\n"
 "   time to answer the questions."
 msgstr ""
+"3. 找一个足够大的房间供你的当面参与者使用。我们建议 15-20 人的课室规模。它足够小，这样人们可以舒适地问问题 --- 也让讲师可以有时间回答这些问题。"
 
 #: src/running-the-course.md:26
 msgid ""
@@ -1020,6 +1035,7 @@ msgid ""
 "   Using your laptop will also allow you to fix typos as you or the course\n"
 "   participants spot them."
 msgstr ""
+"4. 上课当天，提前一点到房间布置。我们建议在你的笔记本使用 `mdbook serve` 直接进行演示。这样保证了最佳性能，在你切换页面时不会有延迟。使用你的笔记本也将允许你修复你或课程参与者发现的拼写错误。"
 
 #: src/running-the-course.md:32
 msgid ""
@@ -1032,6 +1048,7 @@ msgid ""
 "   and offer a solution, e.g., by showing people where to find the relvant\n"
 "   information in the standard library."
 msgstr ""
+"5. 让人们自己或在小组内解决练习题。询问人们是否被卡住了，或者你有什么可以帮助他们的。当你看到几个人都有相同的问题，在课堂上提出并提供一个解决方案，比如，向人们展示从何处查找标准库的相关信息。"
 
 #: src/running-the-course.md:38
 msgid ""
@@ -1042,6 +1059,7 @@ msgid ""
 "   checkout. This will ensure that the Android build system sees the\n"
 "   `Android.bp` files in `src/android/`."
 msgstr ""
+"6. 如果你不跳过第 4 天安卓特有的部分，你将需要 [AOSP checkout][1]。在同一台机器检出一份 [课程仓库][2] 并移动到你的 AOSP 检出的根目录下的 `src/android/` 下。这回确保 Android 构建系统在 `src/android/` 内可以看到 `Android.bp` 文件。"
 
 #: src/running-the-course.md:44
 msgid ""
@@ -1051,6 +1069,7 @@ msgid ""
 "see\n"
 "   the commands it runs and make sure they work when you run them by hand."
 msgstr ""
+"   确保 `adb sync` 在你的模拟器或真实设备上正常工作，并使用 `src/android/build_all.sh` 预先编译所有的安卓示例。阅读脚本内运行的命令并确保你手动运行时可以正常工作。"
 
 #: src/running-the-course.md:48
 msgid ""
@@ -1058,6 +1077,7 @@ msgid ""
 "for\n"
 "you as it has been for us!"
 msgstr ""
+"就是这些，祝你课程顺利！我们希望你和我们一样享受它的乐趣！"
 
 #: src/running-the-course.md:51
 msgid ""
@@ -1065,6 +1085,7 @@ msgid ""
 "course. We would love to hear what worked well for you and what can be made\n"
 "better. Your students are also very welcome to [send us feedback][4]!"
 msgstr ""
+"请稍后[提供反馈][3]，以便我们继续改进课程。我们想知道什么对你很有用，什么可以做得更好。也非常欢迎你的学生[向我们发送反馈][4]！"
 
 #: src/running-the-course.md:55
 msgid ""
@@ -1076,11 +1097,11 @@ msgstr ""
 
 #: src/running-the-course/course-structure.md:1
 msgid "# Course Structure"
-msgstr ""
+msgstr "# 课程结构"
 
 #: src/running-the-course/course-structure.md:5
 msgid "The course is fast paced and covers a lot of ground:"
-msgstr ""
+msgstr "这门课程节奏很快，并涵盖了很多领域："
 
 #: src/running-the-course/course-structure.md:7
 msgid ""
@@ -1089,6 +1110,10 @@ msgid ""
 "* Day 3: Traits and generics, error handling, testing, unsafe Rust.\n"
 "* Day 4: Concurrency in Rust and interoperability with other languages"
 msgstr ""
+"* 第 1 天： Rust 基础、所有权和借用检查。\n"
+"* 第 2 天： 复合数据类型、模式匹配、标准库。\n"
+"* 第 3 天： Trait 和泛型、错误处理、测试、unsafe Rust。\n"
+"* 第 4 天： Rust 中的并发和与其它语言的互操作性"
 
 #: src/running-the-course/course-structure.md:12
 msgid ""
@@ -1098,24 +1123,26 @@ msgid ""
 "better.\n"
 "> Parsing code would be ideal."
 msgstr ""
+"> **第 4 天的练习：** 你在项目中是否面临一些我们可以尝试迁移到 Rust 的 C/C++ 代码？依赖项越少越好，解析代码将会是理想的选择。"
 
 #: src/running-the-course/course-structure.md:16
 msgid "## Format"
-msgstr ""
+msgstr "## 形式"
 
 #: src/running-the-course/course-structure.md:18
 msgid ""
 "The course is meant to be very interactive and we recommend letting the\n"
 "questions drive the exploration of Rust!"
 msgstr ""
+"本课程旨在活跃互动，我们建议让问题推动对 Rust 的探索！"
 
 #: src/running-the-course/keyboard-shortcuts.md:1
 msgid "# Keyboard Shortcuts"
-msgstr ""
+msgstr "# 快捷键"
 
 #: src/running-the-course/keyboard-shortcuts.md:3
 msgid "There are several useful keyboard shortcuts in mdBook:"
-msgstr ""
+msgstr "mdBook 中有一些非常有用的快捷键："
 
 #: src/running-the-course/keyboard-shortcuts.md:5
 msgid ""
@@ -1124,6 +1151,10 @@ msgid ""
 "* <kbd>Ctrl + Enter</kbd>: Execute the code sample that has focus.\n"
 "* <kbd>s</kbd>: Activate the search bar."
 msgstr ""
+"* <kbd>方向键-左</kbd>： 前往前一个页面。\n"
+"* <kbd>方向键-右</kbd>： 前往下一个页面。\n"
+"* <kbd>Ctrl + Enter</kbd>： 执行焦点处的代码示例。\n"
+"* <kbd>s</kbd>： 激活搜索栏。"
 
 #: src/cargo.md:1
 msgid "# Using Cargo"
