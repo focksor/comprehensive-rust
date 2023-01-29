@@ -1773,6 +1773,7 @@ msgid ""
 "Let us jump into the simplest possible Rust program, a classic Hello World\n"
 "program:"
 msgstr ""
+"让我们进入最简单的 Rust 程序，一个经典的 Hello World 程序："
 
 #: src/hello-world.md:6
 msgid ""
@@ -1785,7 +1786,7 @@ msgstr ""
 
 #: src/hello-world.md:12
 msgid "What you see:"
-msgstr ""
+msgstr "你看到的是："
 
 #: src/hello-world.md:14
 msgid ""
@@ -1795,6 +1796,11 @@ msgid ""
 "* Rust has hygienic macros, `println!` is an example of this.\n"
 "* Rust strings are UTF-8 encoded and can contain any Unicode character."
 msgstr ""
+"* 函数是由 `fn` 引入的。\n"
+"* 块由花括号分隔，就像 C 和 C++ 那样。\n"
+"* `main` 函数是程序的入口。\n"
+"* Rust 有干净的宏，`println!` 就是其中一个例子。\n"
+"* Rust 的字符串是 UTF-8 编码的，可以包含任何 Unicode 字符。"
 
 #: src/hello-world.md:22
 msgid ""
@@ -1803,6 +1809,7 @@ msgid ""
 "a ton of it over the next four days so we start small with something "
 "familiar."
 msgstr ""
+"这页幻灯片试图让学生熟悉 Rust 代码。他们会在后续四天中看到非常多代码，因此我们从熟悉的小案例开始。"
 
 #: src/hello-world.md:27
 msgid ""
@@ -1810,10 +1817,11 @@ msgid ""
 "  imperative (not functional) and it doesn't try to reinvent things unless\n"
 "  absolutely necessary."
 msgstr ""
+"* Rust 很像 C/C++/Java 传统中的其它语言。它是命令式（而不是函数式）的，并且它不会尝试造轮子，除非是确实需要。"
 
 #: src/hello-world.md:31
 msgid "* Rust is modern with full support for things like Unicode."
-msgstr ""
+msgstr "* Rust 是现代的，完全支持像 Unicode 之类的东西。"
 
 #: src/hello-world.md:33
 msgid ""
@@ -1821,14 +1829,15 @@ msgid ""
 "of\n"
 "  arguments (no function [overloading](basic-syntax/functions-interlude.md))."
 msgstr ""
+"* Rust 使用宏（而不是函数[重载](basic-syntax/functions-interlude.md)）来适配那些你想要使用不定数量参数的地方。"
 
 #: src/hello-world/small-example.md:1
 msgid "# Small Example"
-msgstr ""
+msgstr "# 小示例"
 
 #: src/hello-world/small-example.md:3
 msgid "Here is a small example program in Rust:"
-msgstr ""
+msgstr "这里有一个 Rust 的小示例程序："
 
 #: src/hello-world/small-example.md:5
 msgid ""
@@ -1848,6 +1857,21 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
+"```rust,editable\n"
+"fn main() {              // 程序入口\n"
+"    let mut x: i32 = 6;  // 可变的变量绑定\n"
+"    print!(\"{x}\");       // 用于打印的宏，就像 printf\n"
+"    while x != 1 {       // 表达式周围没有括号\n"
+"        if x % 2 == 0 {  // 像其他语言那样的数学运算\n"
+"            x = x / 2;\n"
+"        } else {\n"
+"            x = 3 * x + 1;\n"
+"        }\n"
+"        print!(\" -> {x}\");\n"
+"    }\n"
+"    println!();\n"
+"}\n"
+"```"
 
 #: src/hello-world/small-example.md:23
 msgid ""
@@ -1857,6 +1881,7 @@ msgid ""
 "different\n"
 "inputs."
 msgstr ""
+"这个代码实现了 Collatz 猜想：人们相信循环将总是结束，但是这尚未得到证实。编辑代码并以不同输入值运行。"
 
 #: src/hello-world/small-example.md:29
 msgid ""
@@ -1865,10 +1890,11 @@ msgid ""
 "  type inference. Try with `i8` instead and trigger a runtime integer "
 "overflow."
 msgstr ""
+"* 解释所有的变量都是静态类型的。尝试移除 `i32` 来触发类型推导。尝试使用 `i8` 并触发一个运行时整数溢出。"
 
 #: src/hello-world/small-example.md:32
 msgid "* Change `let mut x` to `let x`, discuss the compiler error."
-msgstr ""
+msgstr "* 更改 `let mut x` 为 `let x`，讨论编译器错误。"
 
 #: src/hello-world/small-example.md:34
 msgid ""
@@ -1876,12 +1902,14 @@ msgid ""
 "the\n"
 "  format string."
 msgstr ""
+"* 展示如果参数和格式化字符串不匹配时 `print!` 会如何给出编译错误。"
 
 #: src/hello-world/small-example.md:37
 msgid ""
 "* Show how you need to use `{}` as a placeholder if you want to print an\n"
 "  expression which is more complex than just a single variable."
 msgstr ""
+"* 展示当你想要打印一个更复杂的表达式而不是单个变量时，你需要如何使用 `{}` 作为占位符。"
 
 #: src/hello-world/small-example.md:40
 msgid ""
@@ -1891,6 +1919,7 @@ msgid ""
 "the\n"
 "  students become familiar with searching in the standard library."
 msgstr ""
+"* 向学生展示标准库和如何搜索 `std::fmt`，它有着格式化相关的微型语言的规则。学生熟悉搜索标准库是非常重要的。"
 
 #: src/why-rust.md:1
 msgid "# Why Rust?"
