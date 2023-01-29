@@ -1620,19 +1620,20 @@ msgstr ""
 
 #: src/welcome-day-1.md:1
 msgid "# Welcome to Day 1"
-msgstr ""
+msgstr "# 欢迎来到第 1 天"
 
 #: src/welcome-day-1.md:3
 msgid ""
 "This is the first day of Comprehensive Rust. We will cover a lot of ground\n"
 "today:"
-msgstr ""
+msgstr "这是 Comprehensive Rust 的第一天。我们今天将涵盖很多方面："
 
 #: src/welcome-day-1.md:6
 msgid ""
 "* Basic Rust syntax: variables, scalar and compound types, enums, structs,\n"
 "  references, functions, and methods."
 msgstr ""
+"* 基础 Rust 语法：变量、标量和复合类型、枚举、结构体、引用、函数和方法。"
 
 #: src/welcome-day-1.md:9
 msgid ""
@@ -1640,15 +1641,17 @@ msgid ""
 "memory\n"
 "  management, and garbage collection."
 msgstr ""
+"* 内存管理：堆和栈、手动内存管理、基于作用域的内存管理和垃圾回收。"
 
 #: src/welcome-day-1.md:12
 msgid ""
 "* Ownership: move semantics, copying and cloning, borrowing, and lifetimes."
 msgstr ""
+"* 所有权：移动语义、复制和克隆、借用和生命周期。"
 
 #: src/welcome-day-1.md:16
 msgid "Please remind the students that:"
-msgstr ""
+msgstr "请提醒学生："
 
 #: src/welcome-day-1.md:18
 msgid ""
@@ -1668,6 +1671,11 @@ msgid ""
 "    that the slides are just a support and you are free to skip them as you\n"
 "    like."
 msgstr ""
+"* 他们应该在想到问题时立即提问，而不是留到最后。\n"
+"* 课堂旨在互动，非常鼓励进行讨论！\n"
+"  * 作为讲师，你应该尽量保持讨论的相关性，也就是说，保持关于 Rust 和其它语言如何实现的相关性。这很难找到平衡点，但是允许讨论可能会有错误，因为这不仅仅只是单向交流。\n"
+"* 问题有可能是我们之前的幻灯片提到的内容。\n"
+"  * 这非常没问题！重复是学习的重要部分。请记住幻灯片只是一个支撑，你可以随意跳过它们。"
 
 #: src/welcome-day-1.md:29
 msgid ""
@@ -1677,18 +1685,22 @@ msgid ""
 "feature\n"
 "and we should show students this right away."
 msgstr ""
+"第一天的想法是展现 _刚好多_ 的 Rust 以便我们能够谈论著名的借用检查。Rust 内存处理是一个显著特性，我们应该立即向学生展示这一点。"
 
 #: src/welcome-day-1.md:33
 msgid ""
 "If you're teaching this in a classroom, this is a good place to go over the\n"
 "schedule. We suggest splitting the day into two parts (following the slides):"
 msgstr ""
+"如果你在课室进行教授，这会是一个执行时间表的好地方。我们建议将一天分为两部分（如下）："
 
 #: src/welcome-day-1.md:36
 msgid ""
 "* Morning: 9:00 to 12:00,\n"
 "* Afternoon: 13:00 to 16:00."
 msgstr ""
+"* 上午：9:00 到 12:00，\n"
+"* 下午：13:00 到 16:00。"
 
 #: src/welcome-day-1.md:39
 msgid ""
@@ -1696,14 +1708,15 @@ msgid ""
 "breaks,\n"
 "we recommend a break every hour!"
 msgstr ""
+"当然，你可以按照需要进行调整。请确保包含了休息时间，我们建议每小时都有一次休息！"
 
 #: src/welcome-day-1/what-is-rust.md:1
 msgid "# What is Rust?"
-msgstr ""
+msgstr "# Rust 是什么？"
 
 #: src/welcome-day-1/what-is-rust.md:3
 msgid "Rust is a new programming language which had its 1.0 release in 2015:"
-msgstr ""
+msgstr "Rust 是一门新语言，2015年发布了1.0版本："
 
 #: src/welcome-day-1/what-is-rust.md:5
 msgid ""
@@ -1721,10 +1734,21 @@ msgid ""
 "  * desktops,\n"
 "  * servers."
 msgstr ""
+"* Rust 是一门静态编译语言，扮演如 C++ 那样的角色\n"
+"  * `rustc` 使用 LLVM 作为后端。\n"
+"* Rust 支持很多[平台和架构](https://doc.rust-lang.org/nightly/rustc/platform-support.html)："
+"  * x86, ARM, WebAssembly, ...\n"
+"  * Linux, Mac, Windows, ...\n"
+"* Rust 广泛用于设备：\n"
+"  * 固件和引导加载程序，\n"
+"  * 智能显示器，\n"
+"  * 移动电话，\n"
+"  * 桌面，\n"
+"  * 服务器。"
 
 #: src/welcome-day-1/what-is-rust.md:21
 msgid "Rust fits in the same area as C++:"
-msgstr ""
+msgstr "Rust 的区域与 C++ 相同："
 
 #: src/welcome-day-1/what-is-rust.md:23
 msgid ""
@@ -1734,6 +1758,11 @@ msgid ""
 "* Has no runtime or garbage collection.\n"
 "* Focuses on reliability and safety without sacrificing performance."
 msgstr ""
+"* 灵活性高。\n"
+"* 高度可控。\n"
+"* 可以缩小到非常受限的设备，比如移动电话。\n"
+"* 没有运行时和垃圾收集。\n"
+"* 在不牺牲性能的前提下，注重可靠性和安全性。"
 
 #: src/hello-world.md:1
 msgid "# Hello World!"
