@@ -1923,11 +1923,11 @@ msgstr ""
 
 #: src/why-rust.md:1
 msgid "# Why Rust?"
-msgstr ""
+msgstr "# 为什么使用 Rust？"
 
 #: src/why-rust.md:3
 msgid "Some unique selling points of Rust:"
-msgstr ""
+msgstr "一些 Rust 的独特卖点："
 
 #: src/why-rust.md:5
 msgid ""
@@ -1935,6 +1935,9 @@ msgid ""
 "* Lack of undefined runtime behavior.\n"
 "* Modern language features."
 msgstr ""
+"* 编译器内存安全。\n"
+"* 缺少未定义的运行时行为。\n"
+"* 现代的语言特性。"
 
 #: src/why-rust.md:11
 msgid ""
@@ -1942,6 +1945,7 @@ msgid ""
 "Depending\n"
 "on the answer you can highlight different features of Rust:"
 msgstr ""
+"询问学生他们有哪些语言的经验。基于回答你可以突出 Rust 的不同特点："
 
 #: src/why-rust.md:14
 msgid ""
@@ -1953,6 +1957,7 @@ msgid ""
 "with\n"
 "  constructs like pattern matching and built-in dependency management."
 msgstr ""
+"* 有 C 或 C++ 经验：Rust 通过借用检查器排除了所有 _运行期错误_。你会获得像 C 和 C++ 那样的性能，但是不会有内存安全问题。此外，你还会获得一个现代化的语言，它有着模式匹配之类的结构和内建的依赖管理。"
 
 #: src/why-rust.md:19
 msgid ""
@@ -1964,14 +1969,15 @@ msgid ""
 "collector)\n"
 "  as well as access to low-level hardware (should you need it)"
 msgstr ""
+"* 有 Java, Go, Python, JavaScript... 经验：你会获得和其它语言一样的内存安全，以及熟悉的高级语言体验。此外，你还获得像 C 和 C++ 那样快速和可预测的性能（没有垃圾回收）和低级硬件的访问（如果需要的话）"
 
 #: src/why-rust/compile-time.md:1
 msgid "# Compile Time Guarantees"
-msgstr ""
+msgstr "# 编译期保证"
 
 #: src/why-rust/compile-time.md:3
 msgid "Static memory management at compile time:"
-msgstr ""
+msgstr "编译期的静态内存管理："
 
 #: src/why-rust/compile-time.md:5
 msgid ""
@@ -1984,12 +1990,21 @@ msgid ""
 "* No data races between threads.\n"
 "* No iterator invalidation."
 msgstr ""
+"* 没有未初始化的变量。\n"
+"* 没有内存泄漏（_几乎没有_， 看备注）\n"
+"* 没有重复释放(double-frees)。\n"
+"* 没有释放后使用(use-after-free)。\n"
+"* 没有 `NULL` 指针。\n"
+"* 没有忘记锁定的互斥锁。\n"
+"* 没有线程间数据竞争。\n"
+"* 没有迭代器无效。"
 
 #: src/why-rust/compile-time.md:16
 msgid ""
 "It is possible to produce memory leaks in (safe) Rust. Some examples\n"
 "are:"
 msgstr ""
+"在 (safe) Rust 中产生内存泄漏是有可能的。比如："
 
 #: src/why-rust/compile-time.md:19
 msgid ""
@@ -2002,12 +2017,17 @@ msgid ""
 "* In fact, some will consider infinitely populating a collection a memory\n"
 "  leak and Rust does not protect from those."
 msgstr ""
+"* 你可以使用 [`Box::leak`] 泄漏一个指针。这个可以获得一个运行时初始化和运行时确定大小的静态变量\n"
+"* 你可以使用 [`std::mem::forget`] 让编译期 \"忘记\" 一个值（意味着销毁器永远不会执行）。\n"
+"* 你还可能使用 `Rc` 或 `Arc` 意外创建一个[循环引用]。"
+"* 事实上，有些人会认为无限填充集合也是内存泄漏，Rust 无法防止这些内存泄漏。"
 
 #: src/why-rust/compile-time.md:28
 msgid ""
 "For the purpose of this course, \"No memory leaks\" should be understood\n"
 "as \"Pretty much no *accidental* memory leaks\"."
 msgstr ""
+"就本课程而言，\"没有内存泄漏\" 应理解为 \"几乎没有*意外的*内存泄漏\""
 
 #: src/why-rust/compile-time.md:31
 msgid ""
@@ -2017,20 +2037,27 @@ msgid ""
 "[reference cycle]: https://doc.rust-lang.org/book/ch15-06-reference-cycles."
 "html"
 msgstr ""
+"[`Box::leak`]: https://doc.rust-lang.org/std/boxed/struct.Box.html#method."
+"leak\n"
+"[`std::mem::forget`]: https://doc.rust-lang.org/std/mem/fn.forget.html\n"
+"[循环引用]: https://doc.rust-lang.org/book/ch15-06-reference-cycles."
+"html"
 
 #: src/why-rust/runtime.md:1
 msgid "# Runtime Guarantees"
-msgstr ""
+msgstr "# 运行期保证"
 
 #: src/why-rust/runtime.md:3
 msgid "No undefined behavior at runtime:"
-msgstr ""
+msgstr "没有运行时未定义行为："
 
 #: src/why-rust/runtime.md:5
 msgid ""
 "* Array access is bounds checked.\n"
 "* Integer overflow is defined."
 msgstr ""
+"* 数组访问是经过边界检查的。\n"
+"* 数字溢出是明确的。"
 
 #: src/why-rust/runtime.md:12
 msgid ""
@@ -2039,6 +2066,7 @@ msgid ""
 "  semantics. By default, you get panics in debug mode (`cargo build`)\n"
 "  and wrap-around in release mode (`cargo build --release`)."
 msgstr ""
+"* 数字溢出通过一个编译期标识是可以明确的。可选项是要么 panic（一个可控的程序奔溃），要么是环绕。默认情况下，你会在 debug 模式(`cargo build`)获得 panic 并在 release 模式(`cargo build --release`)获得环绕。"
 
 #: src/why-rust/runtime.md:17
 msgid ""
@@ -2047,18 +2075,19 @@ msgid ""
 "  `unsafe` allows you to call functions such as `slice::get_unchecked`\n"
 "  which does not do bounds checking."
 msgstr ""
+"* 边界检查不能通过编译期标识取消。它也不能直接通过 `unsafe` 关键字取消。不过，`unsafe` 允许你调用如 `slice::get_unchecked` 这样的不做边界检查的函数。"
 
 #: src/why-rust/modern.md:1
 msgid "# Modern Features"
-msgstr ""
+msgstr "# 现代化特性"
 
 #: src/why-rust/modern.md:3
 msgid "Rust is built with all the experience gained in the last 40 years."
-msgstr ""
+msgstr "Rust 是基于过去40年中获得的所有经验构建的。"
 
 #: src/why-rust/modern.md:5
 msgid "## Language Features"
-msgstr ""
+msgstr "## 语言特性"
 
 #: src/why-rust/modern.md:7
 msgid ""
@@ -2067,10 +2096,14 @@ msgid ""
 "* No overhead FFI.\n"
 "* Zero-cost abstractions."
 msgstr ""
+"* 枚举和模式匹配。\n"
+"* 泛型。\n"
+"* 无负担的 FFI。\n"
+"* 零成本抽象。"
 
 #: src/why-rust/modern.md:12
 msgid "## Tooling"
-msgstr ""
+msgstr "## 工具"
 
 #: src/why-rust/modern.md:14
 msgid ""
@@ -2079,6 +2112,10 @@ msgid ""
 "* Built-in support for testing.\n"
 "* Excellent Language Server Protocol support."
 msgstr ""
+"* 较好的编译器错误。\n"
+"* 集成依赖管理。\n"
+"* 集成测试支持。\n"
+"* 出色的 Language Server Protocol 支持。"
 
 #: src/why-rust/modern.md:23
 msgid ""
@@ -2088,6 +2125,7 @@ msgid ""
 "  writing a loop using `for` should result in roughly the same low level\n"
 "  instructions as using the `.iter().fold()` construct."
 msgstr ""
+"* 零成本抽象，类似于 C++，意味着你不需要'支付'使用高级语言指令的内存或 CPU 代价。比如，使用 `for` 编写一个循环应得到与使用 `.iter().fold()` 大致相同的低级指令。"
 
 #: src/why-rust/modern.md:28
 msgid ""
@@ -2096,6 +2134,7 @@ msgid ""
 "  known as 'sum types', which allow the type system to express things like\n"
 "  `Option<T>` and `Result<T, E>`."
 msgstr ""
+"* 值得一提的是，Rust 的枚举是 '代数类型'，也被称为 'sum types'，它运行类型系统表达类型 `Option<T>` 和 `Result<T, E>` 这样的内容。"
 
 #: src/why-rust/modern.md:32
 msgid ""
@@ -2105,6 +2144,7 @@ msgid ""
 "_actionable_\n"
 "  feedback, ready to copy-paste into your code."
 msgstr ""
+"* 提醒人们阅读错误 --- 很多开发者习惯于忽视冗长的编译器输出。Rust 的编译器比其它编译器更显著地啰嗦。它经常会给你提供可行的返回，准备好让你复制粘贴到你的代码中。"
 
 #: src/why-rust/modern.md:37
 msgid ""
@@ -2114,6 +2154,7 @@ msgid ""
 "and\n"
 "  essential:"
 msgstr ""
+"* Rust 标准库相比像 Java、Python 和 Go 这样的语言非常小。Rust 没有一些你可能觉得是标准或核心的东西："
 
 #: src/why-rust/modern.md:41
 msgid ""
@@ -2121,6 +2162,9 @@ msgid ""
 "  * support for SSL or TLS, but see [rusttls].\n"
 "  * support for JSON, but see [serde_json]."
 msgstr ""
+"  * 一个随机数生成器，但是可以看 [rangd]。\n"
+"  * SSL 或 TLS 支持，但是可以看 [rusttls]。\n"
+"  * JSON 支持，但是可以看 [serde_json]。"
 
 #: src/why-rust/modern.md:45
 msgid ""
@@ -2131,6 +2175,7 @@ msgid ""
 "there\n"
 "  isn't a single \"best solution\" for some of these things."
 msgstr ""
+"  背后的原因是标准库的功能无法消失，因此它必须非常稳定。对于上面的举例，Rust 社区仍然在努力寻找最佳解决方案 --- 但是对于这些事情，也许没有一个最佳的解决方案。"
 
 #: src/why-rust/modern.md:50
 msgid ""
@@ -2140,6 +2185,7 @@ msgid ""
 "this\n"
 "  is that the standard library can be smaller."
 msgstr ""
+"  Rust 附带了一个 Cargo 形式的内置的包管理器，这使得下载和编译第三方 crate 变得很简单。这样做的结果是标准库可以变得更小。"
 
 #: src/why-rust/modern.md:54
 msgid ""
@@ -2151,6 +2197,8 @@ msgid ""
 "* [rust-analyzer] is a well supported LSP implementation used in major\n"
 "  IDEs and text editors."
 msgstr ""
+"  发现好的第三方 crate 会成为一个难题。网站例如 <https://lib.rs/> 通过让你可以对比 crate 的健康指标以找到一个好而可信任的 crate 来帮助你解决这个问题。"
+"* [rust-analyzer] 是一个良好支持 LSP 的实现，用于主流的 IDE 和文本编辑器。\n"
 
 #: src/why-rust/modern.md:61
 msgid ""
