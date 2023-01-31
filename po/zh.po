@@ -2210,11 +2210,11 @@ msgstr ""
 
 #: src/basic-syntax.md:1
 msgid "# Basic Syntax"
-msgstr ""
+msgstr "# 基础语法"
 
 #: src/basic-syntax.md:3
 msgid "Much of the Rust syntax will be familiar to you from C or C++:"
-msgstr ""
+msgstr "Rust 大多数的语法对你来说都很熟悉，就像 C 或 C++ 那样："
 
 #: src/basic-syntax.md:5
 msgid ""
@@ -2225,10 +2225,16 @@ msgid ""
 "* Keywords like `if` and `while` work the same.\n"
 "* Variable assignment is done with `=`, comparison is done with `==`."
 msgstr ""
+"* 块和作用域使用花括号分隔。\n"
+"* 行注释以 `//` 开头，块注释包含于 `/"
+"* ...\n"
+"  */`。\n"
+"* 关键字像 `if` 和 `while` 以同样的方式工作。\n"
+"* 通过 `=` 进行变量赋值，使用 `==` 进行比较。"
 
 #: src/basic-syntax/scalar-types.md:1
 msgid "# Scalar Types"
-msgstr ""
+msgstr "# 标量类型"
 
 #: src/basic-syntax/scalar-types.md:3
 msgid ""
@@ -2250,10 +2256,27 @@ msgid ""
 "| Booleans               | `bool`                                     | "
 "`true`, `false`               |"
 msgstr ""
+"|                        | 类型                                      | "
+"字面量                      |\n"
+"|------------------------|--------------------------------------------|-------------------------------|\n"
+"| 有符号整数               | `i8`, `i16`, `i32`, `i64`, `i128`, `isize` | "
+"`-10`, `0`, `1_000`, `123i64` |\n"
+"| 无符号整数               | `u8`, `u16`, `u32`, `u64`, `u128`, `usize` | `0`, "
+"`123`, `10u16`           |\n"
+"| 浮点数                  | `f32`, `f64`                               | "
+"`3.14`, `-10.0e20`, `2f32`    |\n"
+"| 字符串                  | `&str`                                     | `"
+"\"foo\"`, `r#\"\\\\\"#`            |\n"
+"| Unicode 标量值          | `char`                                     | "
+"`'a'`, `'α'`, `'∞'`           |\n"
+"| 字节字符串               | `&[u8]`                                    | `b"
+"\"abc\"`, `br#\" \" \"#`         |\n"
+"| 布尔               | `bool`                                     | "
+"`true`, `false`               |"
 
 #: src/basic-syntax/scalar-types.md:13
 msgid "The types have widths as follows:"
-msgstr ""
+msgstr "类型有如下宽度："
 
 #: src/basic-syntax/scalar-types.md:15
 msgid ""
@@ -2262,10 +2285,14 @@ msgid ""
 "* `char` is 32 bit wide,\n"
 "* `bool` is 8 bit wide."
 msgstr ""
+"* `iN`、 `uN` 和 `fN` 是 _N_ 位宽，\n"
+"* `isize` 和 `usize` 是指针的宽度，\n"
+"* `char` 是 32 位宽度，\n"
+"* `bool` 是 8 位宽度。"
 
 #: src/basic-syntax/compound-types.md:1
 msgid "# Compound Types"
-msgstr ""
+msgstr "# 复合类型"
 
 #: src/basic-syntax/compound-types.md:3
 msgid ""
@@ -2277,10 +2304,17 @@ msgid ""
 "| Tuples | `()`, `(T,)`, `(T1, T2)`, ... | `()`, `('x',)`, `('x', 1.2)`, ... "
 "|"
 msgstr ""
+"|        | 类型                         | 字面量                          "
+"|\n"
+"|--------|-------------------------------|-----------------------------------|\n"
+"| 数组 | `[T; N]`                      | `[20, 30, 40]`, `[0; 3]`          "
+"|\n"
+"| 元组 | `()`, `(T,)`, `(T1, T2)`, ... | `()`, `('x',)`, `('x', 1.2)`, ... "
+"|"
 
 #: src/basic-syntax/compound-types.md:8
 msgid "Array assignment and access:"
-msgstr ""
+msgstr "数组赋值和访问："
 
 #: src/basic-syntax/compound-types.md:10
 msgid ""
@@ -2295,7 +2329,7 @@ msgstr ""
 
 #: src/basic-syntax/compound-types.md:18
 msgid "Tuple assignment and access:"
-msgstr ""
+msgstr "元组赋值和访问："
 
 #: src/basic-syntax/compound-types.md:20
 msgid ""
@@ -2310,7 +2344,7 @@ msgstr ""
 
 #: src/basic-syntax/compound-types.md:32
 msgid "Arrays:"
-msgstr ""
+msgstr "数组："
 
 #: src/basic-syntax/compound-types.md:34
 msgid ""
@@ -2320,10 +2354,11 @@ msgid ""
 "`[u8; 3]` and\n"
 "  `[u8; 4]` are considered two different types."
 msgstr ""
+"* 数组有相同类型的元素，类型是 `T`，长度是 `N`，这是一个编译期常量。注意数组的长度是*其类型的一部分*，也就是说 `[u8; 3]` 和 `[u8; 4]` 被视为两种不同的类型。\n"
 
 #: src/basic-syntax/compound-types.md:38
 msgid "* We can use literals to assign values to arrays."
-msgstr ""
+msgstr "* 我们可以使用字面量给一个数组赋值。"
 
 #: src/basic-syntax/compound-types.md:40
 msgid ""
@@ -2335,30 +2370,33 @@ msgid ""
 "the\n"
 "  format string."
 msgstr ""
+"* 在 main 函数中，print 语句使用 `?` 格式参数请求 debug 实现：`{}` 给出默认输出，`{:?}` 给出 debug 输出。我们也可以用 `{a}` 和 `{a:?}` 而不用在格式化字符串后面指定值。"
 
 #: src/basic-syntax/compound-types.md:45
 msgid ""
 "* Adding `#`, eg `{a:#?}`, invokes a \"pretty printing\" format, which can "
 "be easier to read."
 msgstr ""
+"* 添加 `#`，比如 `{a:#?}`，会调用 \"漂亮的打印\" 格式，这样更容易阅读。"
 
 #: src/basic-syntax/compound-types.md:47
 msgid "Tuples:"
-msgstr ""
+msgstr "元组："
 
 #: src/basic-syntax/compound-types.md:49
 msgid "* Like arrays, tuples have a fixed length."
-msgstr ""
+msgstr "* 和数组一样，元组有一个固定长度。"
 
 #: src/basic-syntax/compound-types.md:51
 msgid "* Tuples group together values of different types into a compound type."
-msgstr ""
+msgstr "* 元组将不同类型的值组合为一个复合类型。"
 
 #: src/basic-syntax/compound-types.md:53
 msgid ""
 "* Fields of a tuple can be accessed by the period and the index of the "
 "value, e.g. `t.0`, `t.1`."
 msgstr ""
+"* 元组的字段可以通过句点和值的索引访问，比如 `t.0`, `t.1`。"
 
 #: src/basic-syntax/compound-types.md:55
 msgid ""
@@ -2372,14 +2410,16 @@ msgid ""
 "    * You can think of it as `void` that can be familiar to you from other \n"
 "      programming languages."
 msgstr ""
+"* 空元组 `()` 也被叫做 \"单元类型\"，它既是一个类型，也是这个类型唯一有效的值 - 也就是说它的类型和值都使用 `()` 表示，它常被用于，比如，表示一个函数或表达式没有返回值，我们会在后面的幻灯片看到这个。\n"
+"    * 你可以把它当作其它语言的 `void`，这会让你觉得很熟悉。"
 
 #: src/basic-syntax/references.md:1
 msgid "# References"
-msgstr ""
+msgstr "# 引用"
 
 #: src/basic-syntax/references.md:3
 msgid "Like C++, Rust has references:"
-msgstr ""
+msgstr "像 C++ 那样，Rust 有引用："
 
 #: src/basic-syntax/references.md:5
 msgid ""
@@ -2395,7 +2435,7 @@ msgstr ""
 
 #: src/basic-syntax/references.md:14
 msgid "Some notes:"
-msgstr ""
+msgstr "一些注意事项："
 
 #: src/basic-syntax/references.md:16
 msgid ""
@@ -2406,12 +2446,17 @@ msgid ""
 "* References that are declared as `mut` can be bound to different values "
 "over their lifetime."
 msgstr ""
+"* 当赋值时，我们必须解引用 `ref_x`，类似于 C 和 C++ 的指针。\n"
+"* Rust 在某些情况下会自动解引用，特别是当调用方法时（试试 `ref_x.count_ones()`）。\n"
+"* 被声明为 `mut` 的引用在其生命周期内可以被绑定到不同的值。"
 
 #: src/basic-syntax/references.md:21
 msgid ""
 "<details>\n"
 "Key points:"
 msgstr ""
+"<details>\n"
+"要点："
 
 #: src/basic-syntax/references.md:24
 msgid ""
@@ -2422,14 +2467,15 @@ msgid ""
 "  different values, while the second represents a reference to a mutable "
 "value."
 msgstr ""
+" * 请注意 `let mut ref_x: &i32` 和 `let ref_x: &mut i32` 之间的区别。第一个表示一个可变引用，它可以绑定到不同的值，而第二个表示引用一个可变值。"
 
 #: src/basic-syntax/references-dangling.md:1
 msgid "# Dangling References"
-msgstr ""
+msgstr "# 垂悬引用"
 
 #: src/basic-syntax/references-dangling.md:3
 msgid "Rust will statically forbid dangling references:"
-msgstr ""
+msgstr "Rust 将静态禁止垂悬引用："
 
 #: src/basic-syntax/references-dangling.md:5
 msgid ""
@@ -2452,14 +2498,17 @@ msgid ""
 "  enough.\n"
 "* We will talk more about borrowing when we get to ownership."
 msgstr ""
+"* 一个引用被称为“借用”其引用的值。\n"
+"* Rust 跟踪所有引用的生命周期，以确保它们活得足够久。\n"
+"* 当我们讲到所有权时，会讨论更多关于借用的内容。"
 
 #: src/basic-syntax/slices.md:1
 msgid "# Slices"
-msgstr ""
+msgstr "# 切片"
 
 #: src/basic-syntax/slices.md:3
 msgid "A slice gives you a view into a larger collection:"
-msgstr ""
+msgstr "切片给你一个大集合的一个视图："
 
 #: src/basic-syntax/slices.md:5
 msgid ""
@@ -2482,12 +2531,15 @@ msgid ""
 "* Slices borrow data from the sliced type.\n"
 "* Question: What happens if you modify `a[3]`?"
 msgstr ""
+"* 切片从原类型中借用数据。\n"
+"* 问题：如果你修改 `a[3]` 会发生什么？"
 
 #: src/basic-syntax/slices.md:20
 msgid ""
 "* We create a slice by borrowing `a` and specifying the starting and ending "
 "indexes in brackets."
 msgstr ""
+"* 我们通过借用 `a` 并在括号中指定起始和结束的索引来创建切片。"
 
 #: src/basic-syntax/slices.md:22
 msgid ""
@@ -2498,11 +2550,14 @@ msgid ""
 "* The same is true for the last index, so `&a[2..a.len()]` and `&a[2..]` are "
 "identical."
 msgstr ""
+"* 如果切片由索引0开始，Rust 的 range 语法允许我们不写起始索引，也就是说 `&a[0..a.len()]` 和 `&a[..a.len()]` 是完全一致的。\n"
+"* 对于结束索引也一样，所以 `&a[2..a.len()]` 和 `&a[2..]` 是一样的。"
 
 #: src/basic-syntax/slices.md:26
 msgid ""
 "* To easily create a slice of the full array, we can therefore use `&a[..]`."
 msgstr ""
+"* 为了方便地创建完整数组的切片，我们可以使用 `&a[..]`。"
 
 #: src/basic-syntax/slices.md:28
 msgid ""
@@ -2519,6 +2574,9 @@ msgid ""
 "the data from both `a` and `s` safely. \n"
 "  More details will be explained in the borrow checker section."
 msgstr ""
+"* `s` 是一个 `i32` 类型切片的引用。注意 `s` 的类型(`&[i32]`)不再提及数组的长度。这允许我们在不同长度的切片上执行计算。\n"
+"* 切片总是从别的对象借用而来。在这个例子中，`a` 必须保持 '存活'（在作用域）到至少要与我们的切片一样久。\n"
+"* 关于修改 `a[3]` 的问题能引发一个有趣的讨论，而答案是，处于内存安全考虑，当你创建一个切片后，你不能通过 `a` 进行修改，但是 `a` 和 `s` 都可以让你安全地读取数据。更多细节会在借用检查器章节说明。"
 
 #: src/basic-syntax/string-slices.md:1
 msgid "# `String` vs `str`"
@@ -2526,7 +2584,7 @@ msgstr ""
 
 #: src/basic-syntax/string-slices.md:3
 msgid "We can now understand the two string types in Rust:"
-msgstr ""
+msgstr "我们现在可以理解 Rust 中的两种字符串类型："
 
 #: src/basic-syntax/string-slices.md:5
 msgid ""
@@ -2551,13 +2609,15 @@ msgstr ""
 
 #: src/basic-syntax/string-slices.md:20
 msgid "Rust terminology:"
-msgstr ""
+msgstr "Rust 术语："
 
 #: src/basic-syntax/string-slices.md:22
 msgid ""
 "* `&str` an immutable reference to a string slice.\n"
 "* `String` a mutable string buffer."
 msgstr ""
+"* `&str` 一个字符串切片的不可变引用。\n"
+"* `String` 一个可变的字符串缓冲区。"
 
 #: src/basic-syntax/string-slices.md:27
 msgid ""
@@ -2566,6 +2626,7 @@ msgid ""
 "  stored in a block of memory. String literals (`”Hello”`), are stored in "
 "the program’s binary."
 msgstr ""
+"* `&str` 表示一个字符串切片，它是一个指向存在内存块中的 UTF-8 编码的字符串数据的不可变引用。字符串字面量 (如 `”Hello”`)，都保存在程序的二进制文件内。"
 
 #: src/basic-syntax/string-slices.md:30
 msgid ""
@@ -2577,6 +2638,8 @@ msgid ""
 "  creates a new empty string, to which string data can be added using the "
 "`push()` and `push_str()` methods."
 msgstr ""
+"* Rust 的 `String` 类型是一个 bytes 类型 vector 的封装。和 `Vec<T>` 一样，它是有所有权的。\n"
+"* 与许多其它类型一样，`String::from()` 从字符串字面量创建一个字符串；`String::new()` 创建一个字符串，它可以使用 `push()` 和 `push_str()` 方法添加字符串数据。"
 
 #: src/basic-syntax/string-slices.md:35
 msgid ""
@@ -2596,6 +2659,10 @@ msgid ""
 "    \n"
 "</details>"
 msgstr ""
+"* `format!()` 宏是一种从不定值创建自有所有权的字符串的方便方法。它接受与 `println!()` 相同的格式化字符串。\n"
+"* 你可以通过 `&` 和随意的范围选择从 `String` 借用出一个 `&str` 切片。\n"
+"* 对于 C++ 程序员：把 `&str` 想象为 C++ 中的 `const char*`，但是它总是指向内存中的有效字符。Rust 的 `String` 可以粗略看作 C++ 中的`std::string` （主要区别：它只能包含 UTF-8 编码的字节，并且不会使用 small-string 优化）。\n"
+"</details>"
 
 #: src/basic-syntax/functions.md:1
 msgid "# Functions"
