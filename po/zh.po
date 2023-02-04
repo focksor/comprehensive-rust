@@ -2666,13 +2666,14 @@ msgstr ""
 
 #: src/basic-syntax/functions.md:1
 msgid "# Functions"
-msgstr ""
+msgstr "# 函数"
 
 #: src/basic-syntax/functions.md:3
 msgid ""
 "A Rust version of the famous [FizzBuzz](https://en.wikipedia.org/wiki/"
 "Fizz_buzz) interview question:"
 msgstr ""
+"一个 Rust 版本的著名面试问题 [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz)："
 
 #: src/basic-syntax/functions.md:5
 msgid ""
@@ -2681,6 +2682,10 @@ msgid ""
 "    fizzbuzz_to(20);   // Defined below, no forward declaration needed\n"
 "}"
 msgstr ""
+"```rust,editable\n"
+"fn main() {\n"
+"    fizzbuzz_to(20);   // 在下面定义了，不需要预先定义\n"
+"}"
 
 #: src/basic-syntax/functions.md:10
 msgid ""
@@ -2692,6 +2697,13 @@ msgid ""
 "value\n"
 "}"
 msgstr ""
+"fn is_divisible_by(lhs: u32, rhs: u32) -> bool {\n"
+"    if rhs == 0 {\n"
+"        return false;  // 特例，提前返回\n"
+"    }\n"
+"    lhs % rhs == 0     // 代码块的最后一个表达式即返回值"
+"value\n"
+"}"
 
 #: src/basic-syntax/functions.md:17
 msgid ""
@@ -2705,6 +2717,14 @@ msgid ""
 "    }\n"
 "}"
 msgstr ""
+"fn fizzbuzz(n: u32) -> () {  // 没有返回值表示返回单元类型 `()`\n"
+"    match (is_divisible_by(n, 3), is_divisible_by(n, 5)) {\n"
+"        (true,  true)  => println!(\"fizzbuzz\"),\n"
+"        (true,  false) => println!(\"fizz\"),\n"
+"        (false, true)  => println!(\"buzz\"),\n"
+"        (false, false) => println!(\"{n}\"),\n"
+"    }\n"
+"}"
 
 #: src/basic-syntax/functions.md:26
 msgid ""
@@ -2715,6 +2735,12 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
+"fn fizzbuzz_to(n: u32) {  // `-> ()` 通常被省略\n"
+"    for i in 1..=n {\n"
+"        fizzbuzz(i);\n"
+"    }\n"
+"}\n"
+"```"
 
 #: src/basic-syntax/functions.md:35
 msgid ""
@@ -2731,10 +2757,15 @@ msgid ""
 "* The `match` expression in `fizzbuzz()` is doing a lot of work. It is "
 "expanded below to show what is happening."
 msgstr ""
+"* 我们在 `main` 中提到一个下面写的函数。既不需要预先声明，也不需要头文件。\n"
+"* 声明的参数后跟一个类型（有些编程语言是相反的），然后是一个返回值类型。\n"
+"* 函数体（或任何代码块）的最后一个表达式会成为返回值。简单地省略表达式结尾的 `;`。\n"
+"* `fizzbuzz_to()` 里的 `for` 循环的范围表达式包含 `=n`，这让它包含了上边界。\n"
+"* `fizzbuzz()` 里的 `match` 表达式做了很多工作。下面会展开以展示发生了什么。"
 
 #: src/basic-syntax/functions.md:42
 msgid "  (Type annotations added for clarity, but they can be elided.)"
-msgstr ""
+msgstr "  （为了更清晰，添加了类型标注，但是可以省略。）"
 
 #: src/basic-syntax/functions.md:44
 msgid ""
@@ -2753,7 +2784,7 @@ msgstr ""
 
 #: src/basic-syntax/methods.md:1 src/methods.md:1
 msgid "# Methods"
-msgstr ""
+msgstr "# 方法"
 
 #: src/basic-syntax/methods.md:3
 msgid ""
@@ -2761,6 +2792,8 @@ msgid ""
 "particular type. The\n"
 "first argument of a method is an instance of the type it is associated with:"
 msgstr ""
+"Rust 有方法，它们是只与特定类型相关联的函数。"
+"方法的第一个参数是它关联的类型的实例："
 
 #: src/basic-syntax/methods.md:6
 msgid ""
@@ -2803,14 +2836,15 @@ msgid ""
 "* We will look much more at methods in today's exercise and in tomorrow's "
 "class."
 msgstr ""
+"* 我们会在今天的练习和明天的课程中看到更多关于方法的内容。"
 
 #: src/basic-syntax/functions-interlude.md:1
 msgid "# Function Overloading"
-msgstr ""
+msgstr "# 函数重载"
 
 #: src/basic-syntax/functions-interlude.md:3
 msgid "Overloading is not supported:"
-msgstr ""
+msgstr "不支持重载："
 
 #: src/basic-syntax/functions-interlude.md:5
 msgid ""
@@ -2821,10 +2855,16 @@ msgid ""
 "  * All call sites have the same number of arguments.\n"
 "  * Macros are sometimes used as an alternative."
 msgstr ""
+"* 每个函数都有单个实现：\n"
+"  * 总是接受固定数量的参数。\n"
+"  * 总是使用同样的一组参数类型。\n"
+"* 不支持默认值：\n"
+"  * 所有的调用都有同样数量的实参。\n"
+"  * 有时会使用宏作为替代。"
 
 #: src/basic-syntax/functions-interlude.md:12
 msgid "However, function parameters can be generic:"
-msgstr ""
+msgstr "不过，函数参数可以是泛型："
 
 #: src/basic-syntax/functions-interlude.md:14
 msgid ""
@@ -2850,6 +2890,7 @@ msgid ""
 "  polymorphism on argument types. We will see more details in a later "
 "section."
 msgstr ""
+"* 当使用泛型时，标准库的 `Into<T>` 可以在参数类型上提供一种有限的多态。我们会在后面的章节看到更多细节。"
 
 #: src/basic-syntax/functions-interlude.md:30
 msgid "</defails>"
@@ -2857,23 +2898,23 @@ msgstr ""
 
 #: src/exercises/day-1/morning.md:1
 msgid "# Day 1: Morning Exercises"
-msgstr ""
+msgstr "# 第 1 天： 上午练习"
 
 #: src/exercises/day-1/morning.md:3
 msgid "In these exercises, we will explore two parts of Rust:"
-msgstr ""
+msgstr "在这些练习中，我们将探索 Rust 的两个部分："
 
 #: src/exercises/day-1/morning.md:5
 msgid "* Implicit conversions between types."
-msgstr ""
+msgstr "* 类型的隐式转换。"
 
 #: src/exercises/day-1/morning.md:7
 msgid "* Arrays and `for` loops."
-msgstr ""
+msgstr "* 数组与 `for` 循环。"
 
 #: src/exercises/day-1/morning.md:11
 msgid "A few things to consider while solving the exercises:"
-msgstr ""
+msgstr "解决问题时应该考虑的一些事情："
 
 #: src/exercises/day-1/morning.md:13
 msgid ""
@@ -2882,10 +2923,11 @@ msgid ""
 "details\n"
 "  on installing Rust."
 msgstr ""
+"* 如果可能的话，使用一个本地安装的 Rust。这样你可以在你的编辑器中进行自动编译。在 [使用 Cargo] 查看关于安装 Rust 的细节。"
 
 #: src/exercises/day-1/morning.md:17
 msgid "* Alternatively, use the Rust Playground."
-msgstr ""
+msgstr "* 不然，使用 Rust Playground。"
 
 #: src/exercises/day-1/morning.md:19
 msgid ""
@@ -2893,6 +2935,7 @@ msgid ""
 "lose\n"
 "their state if you navigate away from the page."
 msgstr ""
+"出于以下考虑，代码片段是不可编辑的：嵌入的代码片段会在你离开页面时丢失状态。"
 
 #: src/exercises/day-1/morning.md:22 src/exercises/day-1/afternoon.md:11
 #: src/exercises/day-2/morning.md:11 src/exercises/day-2/afternoon.md:7
@@ -2900,19 +2943,20 @@ msgstr ""
 msgid ""
 "After looking at the exercises, you can look at the [solutions] provided."
 msgstr ""
+"在看完练习后，你可以看看提供的[解决方案]。"
 
 #: src/exercises/day-1/morning.md:24 src/exercises/day-2/morning.md:13
 #: src/exercises/day-3/morning.md:9 src/exercises/day-4/morning.md:14
 msgid "[solutions]: solutions-morning.md"
-msgstr ""
+msgstr "[解决方案]: solutions-morning.md"
 
 #: src/exercises/day-1/morning.md:26
 msgid "[Using Cargo]: ../../cargo.md"
-msgstr ""
+msgstr "[使用 Cargo]: ../../cargo.md"
 
 #: src/exercises/day-1/implicit-conversions.md:1
 msgid "# Implicit Conversions"
-msgstr ""
+msgstr "# 隐式转换"
 
 #: src/exercises/day-1/implicit-conversions.md:3
 msgid ""
@@ -2920,6 +2964,7 @@ msgid ""
 "([unlike\n"
 "C++][3]). You can see this in a program like this:"
 msgstr ""
+"Rust 不会在类型间自动应用 _隐式转型_ （[不像 C++][3]）。你可以在类似这样的程序中看到这一点："
 
 #: src/exercises/day-1/implicit-conversions.md:6
 msgid ""
@@ -2953,6 +2998,7 @@ msgid ""
 "into\n"
 "another type."
 msgstr ""
+"Rust 的整数类型都实现了 [`From<T>`][1] 和 [`Into<T>`][2] trait，让我们可以进行转换。`From<T>` trait 只有一个 `from()` 方法，类似地，`Into<T>` trait 也只有一个方法 `into()`。一个类型通过实现这些 trait 表达它如何转换为另外一种类型。"
 
 #: src/exercises/day-1/implicit-conversions.md:25
 msgid ""
@@ -2962,6 +3008,7 @@ msgid ""
 "`i16::from(x)`. Or, simpler, with `x.into()`, because `From<i8> for i16`\n"
 "implementation automatically create an implementation of `Into<i16> for i8`."
 msgstr ""
+"标准库有一个 `From<i8> for i16` 实现，这意味着我们可以通过调用 `i16::from(x)`，将一个 `i8` 类型的变量 `x` 转换为一个 `i16` 类型变量。或者，更简单地，使用 `x.into()`，因为 `From<i8> for i16` 实现会自动创建一个 `Into<i16> for i8` 实现。"
 
 #: src/exercises/day-1/implicit-conversions.md:30
 msgid ""
@@ -2970,14 +3017,15 @@ msgid ""
 "sufficient to only implement `From` to get a respective `Into` "
 "implementation automatically."
 msgstr ""
+"这同样适用于你自己类型的 `From` 实现，因此仅实现 `From` 即可自动获得相应的 `Into` 实现。"
 
 #: src/exercises/day-1/implicit-conversions.md:33
 msgid "1. Execute the above program and look at the compiler error."
-msgstr ""
+msgstr "1. 执行上面的程序并查看编译器错误。"
 
 #: src/exercises/day-1/implicit-conversions.md:35
 msgid "2. Update the code above to use `into()` to do the conversion."
-msgstr ""
+msgstr "2. 更新上面的代码，使用 `into()` 来做转换。"
 
 #: src/exercises/day-1/implicit-conversions.md:37
 msgid ""
@@ -2988,6 +3036,7 @@ msgid ""
 "for\n"
 "   the pairs you check."
 msgstr ""
+"3. 更改 `x` 和 `y` 为其它类型（比如 `f32`, `bool`, `i128`）来看看你可以将什么类型转为哪些其它类型。尝试将小类型转换为大类型，然后反过来试试。查看[标准库文档][1]来看看 `From<T>` 是否在你检查的类型对之间有实现。"
 
 #: src/exercises/day-1/implicit-conversions.md:43
 msgid ""
@@ -2998,11 +3047,11 @@ msgstr ""
 
 #: src/exercises/day-1/for-loops.md:1
 msgid "# Arrays and `for` Loops"
-msgstr ""
+msgstr "# 数组和 `for` 循环"
 
 #: src/exercises/day-1/for-loops.md:3
 msgid "We saw that an array can be declared like this:"
-msgstr ""
+msgstr "我们看到数组可以像这样进行声明："
 
 #: src/exercises/day-1/for-loops.md:5
 msgid ""
@@ -3016,6 +3065,7 @@ msgid ""
 "You can print such an array by asking for its debug representation with `{:?}"
 "`:"
 msgstr ""
+"你可以通过使用 `{:?}` 请求它的 debug 表示来打印这样一个数组："
 
 #: src/exercises/day-1/for-loops.md:11
 msgid ""
@@ -3032,6 +3082,7 @@ msgid ""
 "Rust lets you iterate over things like arrays and ranges using the `for`\n"
 "keyword:"
 msgstr ""
+"Rust 让你可以使用 `for` 关键字在类似数组和 range 这样的东西上进行迭代："
 
 #: src/exercises/day-1/for-loops.md:21
 msgid ""
@@ -3063,6 +3114,7 @@ msgid ""
 "a function `transpose` which will transpose a matrix (turn rows into "
 "columns):"
 msgstr ""
+"使用上面的知识写一个函数 `pretty_print` 漂亮地打印一个矩阵，以及一个函数 `transpose` 进行矩阵转换（将行转换为列）："
 
 #: src/exercises/day-1/for-loops.md:41
 msgid ""
@@ -3075,13 +3127,14 @@ msgstr ""
 
 #: src/exercises/day-1/for-loops.md:47
 msgid "Hard-code both functions to operate on 3 × 3 matrices."
-msgstr ""
+msgstr "将函数都硬编码为操作 3 × 3 的矩阵"
 
 #: src/exercises/day-1/for-loops.md:49
 msgid ""
 "Copy the code below to <https://play.rust-lang.org/> and implement the\n"
 "functions:"
 msgstr ""
+"复制下面的代码到 <https://play.rust-lang.org/> 并实现函数："
 
 #: src/exercises/day-1/for-loops.md:52 src/exercises/day-1/book-library.md:20
 #: src/exercises/day-2/health-statistics.md:13
@@ -3090,6 +3143,9 @@ msgid ""
 "// TODO: remove this when you're done with your implementation.\n"
 "#![allow(unused_variables, dead_code)]"
 msgstr ""
+"```rust,should_panic\n"
+"// TODO: 当你完成实现后删除这个东西\n"
+"#![allow(unused_variables, dead_code)]"
 
 #: src/exercises/day-1/for-loops.md:56
 msgid ""
@@ -3114,6 +3170,12 @@ msgid ""
 "        [301, 302, 303],\n"
 "    ];"
 msgstr ""
+"fn main() {\n"
+"    let matrix = [\n"
+"        [101, 102, 103], // <-- 这个注释让 rustfmt 添加一个新行\n"
+"        [201, 202, 203],\n"
+"        [301, 302, 303],\n"
+"    ];"
 
 #: src/exercises/day-1/for-loops.md:71
 #: src/exercises/day-1/solutions-morning.md:70
@@ -3133,7 +3195,7 @@ msgstr ""
 
 #: src/exercises/day-1/for-loops.md:80
 msgid "## Bonus Question"
-msgstr ""
+msgstr "## 附加题"
 
 #: src/exercises/day-1/for-loops.md:82
 msgid ""
@@ -3141,19 +3203,21 @@ msgid ""
 "argument and return types? Something like `&[&[i32]]` for a two-dimensional\n"
 "slice-of-slices. Why or why not?"
 msgstr ""
+"你可以使用 `&[i32]` 切片而不是硬编码的 3 × 3 矩阵作为你的参数和返回值类型吗？像 `&[&[i32]]` 这样的用于二维切片-的-切片的。为什么或为什么不？"
 
 #: src/exercises/day-1/for-loops.md:87
 msgid ""
 "See the [`ndarray` crate](https://docs.rs/ndarray/) for a production "
 "quality\n"
 "implementation."
-msgstr ""
+msgstr "查看 [`ndarray` crate](https://docs.rs/ndarray/)，一个生产级别质量的实现。"
 
 #: src/exercises/day-1/for-loops.md:92
 msgid ""
 "The solution and the answer to the bonus section are available in the \n"
 "[Solution](solutions-morning.md#arrays-and-for-loops) section."
 msgstr ""
+"附加题的解决方案和答案在[解决方案](solutions-morning.md#arrays-and-for-loops)章节。"
 
 #: src/basic-syntax/variables.md:1
 msgid "# Variables"
